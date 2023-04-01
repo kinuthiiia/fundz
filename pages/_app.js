@@ -4,7 +4,7 @@ import { createClient, Provider } from "urql";
 import { Notifications } from "@mantine/notifications";
 
 export const client = createClient({
-  url: "http://localhost:4000/graphql",
+  url: "https://fundz.herokuapp.com/graphql",
 });
 
 function MyApp({ Component, pageProps }) {
