@@ -914,7 +914,7 @@ const Transaction = ({ data }) => {
             <div className="space-x-1 mt-2  flex overflow-x-auto w-full">
               {data?.tags &&
                 data.tags.map((tag, i) => (
-                  <Badge color="teal" size="xs">
+                  <Badge key={i} color="teal" size="xs">
                     {toTitleCase(tag)}
                   </Badge>
                 ))}
