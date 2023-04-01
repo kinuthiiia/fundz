@@ -565,9 +565,10 @@ export default function Home() {
               className="tracking-tight"
             >
               {data?.getFrontPage?.spend
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-              KES
+                ? data?.getFrontPage?.spend
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " KES"
+                : "0 KES"}
             </Text>
           </div>
 
@@ -583,9 +584,10 @@ export default function Home() {
               className="tracking-tight"
             >
               {data?.getFrontPage?.averageCashOut
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-              KES
+                ? data?.getFrontPage?.averageCashOut
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " KES"
+                : "0 KES"}
             </Text>
           </div>
         </div>
