@@ -49,13 +49,16 @@ import { notifications } from "@mantine/notifications";
 import { useRouter } from "next/router";
 
 const toTitleCase = (str) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map(function (word) {
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join(" ");
+  if (str)
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map(function (word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(" ");
+
+  return;
 };
 
 export default function Home() {
